@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Progress Circular Bar</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --degcolor-0: #e91e63;
+            --degcolor-100: #37bb37;
+        }
+    </style>
  </head>
  <body>
     <div class="progressbar-container">
         <div class="outer-box">
-            <div class="inner-box">
+            <div class="inner-box">%
                 <svg 
                     xmlns="http://www.w3.org/2000/svg"
                     version="1.1"
@@ -18,8 +24,8 @@
                 >
                     <defs>
                         <linearGradient id="gradientColor">
-                            <stop offset="0%" stop-color="#e91e63"/>
-                            <stop offset="100%" stop-color="#e91e63"/>
+                            <stop offset="0%" stop-color="var(--degcolor-0)"/>
+                            <stop offset="100%" stop-color="var(--degcolor-100)"/>
                         </linearGradient>
                     </defs>
                     <circle cx="100" cy="100" r="80" stroke-linecap="round"/>
